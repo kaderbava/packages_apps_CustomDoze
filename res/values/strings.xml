@@ -59,4 +59,8 @@
     <!-- Double tap -->
     <string name="doze_double_tap_title">Double tap</string>
     <string name="doze_double_tap_summary">Double tap your phone to check time, notification icons and other info</string>
+
+    <!-- Brightness -->
+    <string name="doze_brightness_force_title">Force brightness values</string>
+    <string name="doze_brightness_force_summary">Use custom brightness values instead of screen brightness</string>
 </resources>
