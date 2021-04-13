@@ -33,7 +33,7 @@
         android:key="doze_trigger_key"
         android:title="@string/doze_trigger_title" >
 
-        <com.corvus.support.preferences.SwitchPreference
+        <com.corvus.support.preferences.SystemSettingSwitchPreference
             android:key="always_on_ambient"
             android:defaultValue="false"
             android:title="@string/aod_setting_title"
@@ -45,7 +45,7 @@
             android:title="@string/doze_on_charge_title"
             android:summary="@string/doze_on_charge_summary" />
 
-        <com.corvus.support.preferences.SwitchPreference
+        <com.corvus.support.preferences.SystemSettingSwitchPreference
             android:key="ambient_display"
             android:defaultValue="true"
             android:title="@string/ambient_display_notifications"
@@ -68,26 +68,26 @@
             android:title="@string/doze_double_tap_title"
             android:summary="@string/doze_double_tap_summary" />
 
-        <com.corvus.support.preferences.SwitchPreference
+        <com.corvus.support.preferences.SystemSettingSwitchPreference
             android:key="pick_up"
             android:defaultValue="false"
             android:title="@string/pick_up_title"
             android:summary="@string/pick_up_summary" />
 
-        <com.corvus.support.preferences.SwitchPreference
+        <com.corvus.support.preferences.SystemSettingSwitchPreference
             android:key="gesture_raise_to_wake"
             android:defaultValue="false"
             android:title="@string/wake_gesture_title"
             android:summary="@string/wake_gesture_summary"
             android:dependency="pick_up" />
 
-        <com.corvus.support.preferences.SwitchPreference
+        <com.corvus.support.preferences.SystemSettingSwitchPreference
             android:key="gesture_hand_wave"
             android:defaultValue="false"
             android:title="@string/hand_wave_gesture_title"
             android:summary="@string/hand_wave_gesture_summary" />
 
-        <com.corvus.support.preferences.SwitchPreference
+        <com.corvus.support.preferences.SystemSettingSwitchPreference
             android:key="gesture_pocket"
             android:defaultValue="false"
             android:title="@string/pocket_gesture_title"

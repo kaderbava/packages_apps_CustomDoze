@@ -28,7 +28,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 
 import com.corvus.support.preferences.SecureSettingSwitchPreference;
-import com.corvus.support.preferences.SwitchPreference;
 import com.corvus.support.preferences.SystemSettingSeekBarPreference;
 import com.corvus.support.preferences.SystemSettingSwitchPreference;
 
@@ -66,12 +65,12 @@ public class DozeSettings extends PreferenceActivity implements PreferenceFragme
         private Context mContext;
         private ActionBar actionBar;
 
-        private SwitchPreference mAoDPreference;
-        private SwitchPreference mAmbientDisplayPreference;
-        private SwitchPreference mPickUpPreference;
-        private SwitchPreference mRaiseToWakePreference;
-        private SwitchPreference mHandwavePreference;
-        private SwitchPreference mPocketPreference;
+        private SystemSettingSwitchPreference mAoDPreference;
+        private SystemSettingSwitchPreference mAmbientDisplayPreference;
+        private SystemSettingSwitchPreference mPickUpPreference;
+        private SystemSettingSwitchPreference mRaiseToWakePreference;
+        private SystemSettingSwitchPreference mHandwavePreference;
+        private SystemSettingSwitchPreference mPocketPreference;
         private SecureSettingSwitchPreference mDozeOnChargePreference;
         private SystemSettingSwitchPreference mDoubleTapPreference;
         private SystemSettingSwitchPreference mMusicTickerPreference;
@@ -90,7 +89,7 @@ public class DozeSettings extends PreferenceActivity implements PreferenceFragme
             actionBar.setDisplayHomeAsUpEnabled(true);
 
             mAoDPreference =
-                (SwitchPreference) findPreference(Utils.AOD_KEY);
+                (SystemSettingSwitchPreference) findPreference(Utils.AOD_KEY);
 
             mDozeOnChargePreference =
                 (SecureSettingSwitchPreference) findPreference(Utils.AOD_CHARGE_KEY);
@@ -112,27 +111,27 @@ public class DozeSettings extends PreferenceActivity implements PreferenceFragme
             }
 
             mAmbientDisplayPreference =
-                (SwitchPreference) findPreference(Utils.AMBIENT_DISPLAY_KEY);
+                (SystemSettingSwitchPreference) findPreference(Utils.AMBIENT_DISPLAY_KEY);
             mAmbientDisplayPreference.setChecked(Utils.isDozeEnabled(mContext));
             mAmbientDisplayPreference.setOnPreferenceChangeListener(this);
 
             mPickUpPreference =
-                (SwitchPreference) findPreference(Utils.PICK_UP_KEY);
+                (SystemSettingSwitchPreference) findPreference(Utils.PICK_UP_KEY);
             mPickUpPreference.setChecked(Utils.tiltGestureEnabled(mContext));
             mPickUpPreference.setOnPreferenceChangeListener(this);
 
             mRaiseToWakePreference =
-                (SwitchPreference) findPreference(Utils.GESTURE_RAISE_TO_WAKE_KEY);
+                (SystemSettingSwitchPreference) findPreference(Utils.GESTURE_RAISE_TO_WAKE_KEY);
             mRaiseToWakePreference.setChecked(Utils.isRaiseToWakeEnabled(mContext));
             mRaiseToWakePreference.setOnPreferenceChangeListener(this);
 
             mHandwavePreference =
-                (SwitchPreference) findPreference(Utils.GESTURE_HAND_WAVE_KEY);
+                (SystemSettingSwitchPreference) findPreference(Utils.GESTURE_HAND_WAVE_KEY);
             mHandwavePreference.setChecked(Utils.handwaveGestureEnabled(mContext));
             mHandwavePreference.setOnPreferenceChangeListener(this);
 
             mPocketPreference =
-                (SwitchPreference) findPreference(Utils.GESTURE_POCKET_KEY);
+                (SystemSettingSwitchPreference) findPreference(Utils.GESTURE_POCKET_KEY);
             mPocketPreference.setChecked(Utils.pocketGestureEnabled(mContext));
             mPocketPreference.setOnPreferenceChangeListener(this);
 
